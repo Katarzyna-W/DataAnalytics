@@ -10,12 +10,12 @@ using namespace stan::math;
 stan::math::profile_map profiles__;
 static constexpr std::array<const char*, 7> locations_array__ = 
 {" (found before start of program)",
- " (in '/home/kasia/Documents/DataAnalytics/bern_1.stan', line 6, column 3 to column 31)",
- " (in '/home/kasia/Documents/DataAnalytics/bern_1.stan', line 9, column 3 to column 21)",
- " (in '/home/kasia/Documents/DataAnalytics/bern_1.stan', line 10, column 3 to column 24)",
- " (in '/home/kasia/Documents/DataAnalytics/bern_1.stan', line 2, column 3 to column 18)",
- " (in '/home/kasia/Documents/DataAnalytics/bern_1.stan', line 3, column 26 to column 27)",
- " (in '/home/kasia/Documents/DataAnalytics/bern_1.stan', line 3, column 3 to column 29)"};
+ " (in '/home/kasia/Documents/DataAnalytics/Lab1/bern_1.stan', line 6, column 3 to column 31)",
+ " (in '/home/kasia/Documents/DataAnalytics/Lab1/bern_1.stan', line 9, column 3 to column 21)",
+ " (in '/home/kasia/Documents/DataAnalytics/Lab1/bern_1.stan', line 10, column 3 to column 24)",
+ " (in '/home/kasia/Documents/DataAnalytics/Lab1/bern_1.stan', line 2, column 3 to column 18)",
+ " (in '/home/kasia/Documents/DataAnalytics/Lab1/bern_1.stan', line 3, column 26 to column 27)",
+ " (in '/home/kasia/Documents/DataAnalytics/Lab1/bern_1.stan', line 3, column 3 to column 29)"};
 
 
 

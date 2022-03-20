@@ -4,6 +4,7 @@ import arviz as az
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats as stats
+import os
 
 """-----------------------Exercise 1-----------------------""" 
 #F=9, N=8
@@ -12,7 +13,8 @@ N = len('Wątorska')
 L = len('Wątorska')
 
 #1 complie stan model and sample it
-my_stan_model = CmdStanModel('code_1.stan')
+#my_stan_file = os.path.join('.', 'code_1.stan')
+my_stan_model = CmdStanModel(stan_file = '/home/kasia/Documents/DataAnalytics/Lab2/code_1.stan')
 samples = my_stan_model.sample(data = {'M' : 'F'})
 
 #2 dataframe

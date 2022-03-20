@@ -8,7 +8,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import datetime as dt
 import numpy as np
-"""-------------------------Excercise 1-------------------------"""
+#import cmdstanpy
+#cmdstanpy.install_cmdstan()    
+"""-------------------------Excercise 1-------------------------
 
 #1 import data from the file & #2 set first column as the index
 data_file = pd.read_csv('Data1.csv', index_col = 0)
@@ -32,7 +34,7 @@ rows_2018[columns2].plot(linewidth = 0.2, subplots=True)
 rows_2018[columns2].hist(bins = 60)
 
 rows_2018[columns2].plot.kde()
-
+"""
 
 
 """-------------------------Excercise 2-------------------------"""
@@ -61,12 +63,13 @@ my_model.exe_file
 my_model.code()
 
 #5 sample the model
-fit = my_model.sample(data=dataset)
+fit = my_model.sample(data=dataset1)
 
 
 #6 extract theta & create histogram
-theta = sample.stan_variable('theta')
-summary = sample.summary()
+theta = fit.stan_variable('theta')
+summary = fit.summary()
+print(theta)
 plt.hist(theta, bins=20)
 
 plt.show()
