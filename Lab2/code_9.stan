@@ -17,5 +17,5 @@ model {
 		
 	//add marginal probability density for theta
 	// to the joint log probability density
-	target += normal_lpdf(theta | 0,1);
+	target += normal_lpdf(theta | 0, 1);
 }

@@ -1,13 +1,13 @@
 functions {
 	// Difference between one-sided Gaussian tail probability and target probability
-	vector tail_delta(vector y, vector theta, real[], x_r, int[] x_1){
+	vector tail_delta(vector y, vector theta, real[] x_r, int[] x_i){
 		vector[1] deltas;
-		deltas[1] = 2*(normal_cdf(theta[1], 0, exp([y[1])) - 0.5) - 0.99
+		deltas[1] = 2*(normal_cdf(theta[1], 0, exp(y[1])) - 0.5) - 0.99;
 		return deltas;
 	}
 }
 
-data {[
+data {
 	vector[1] y_guess; // initial guess of Gaussian standard deviation
 	vector[1] theta; //Target quantile
 }
