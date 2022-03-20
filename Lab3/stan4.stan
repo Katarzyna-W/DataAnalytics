@@ -1,7 +1,8 @@
 data {
 int<lower=1> N; // number of observations
+}
 
-generated quantites {
+generated quantities {
 
 	real mu = normal_rng(0,1);
 	real<lower=0> sigma = abs(normal_rng(0,1));

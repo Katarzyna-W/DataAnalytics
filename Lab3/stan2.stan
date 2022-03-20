@@ -8,6 +8,6 @@ real<lower=0, upper = 1> theta;
 }
 
 model{
-theta ~ bta(1,1);
+theta ~ beta(1,1);
 y~bernoulli(theta);
 }
