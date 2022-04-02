@@ -9,6 +9,6 @@ generated quantities {
 	real sigma = exponential_rng(0.067);
 	real height[N];
 	for(i in 1:N) {
-		height[N] = normal_rng(weight[N]*beta+alpha, sigma);
+		height[i] = normal_rng(weight[i]*beta+alpha, sigma);
 	}
 }

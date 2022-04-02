@@ -4,7 +4,7 @@ data {
 	real heights[N];
 }
 
-parameteres {
+parameters {
 	real alpha;
 	real beta;
 	real<lower=0> sigma;
