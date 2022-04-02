@@ -6,7 +6,8 @@ transformed data {
 	real<lower=0, upper=1> sig_prob = 0.05;
 }
 
-generated_quantities{
+
+generated quantities{
 	matrix[M,N] X;
 	array[N] real y;
 	
