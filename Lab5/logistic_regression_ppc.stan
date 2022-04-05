@@ -1,6 +1,6 @@
 data {
 	int<lower=1> N; //number of observations
-	int<lower=1 M; // numer of covariates
+	int<lower=1> M; // numer of covariates
 	matrix[N, M] X; // covariate design matrix
 	real sigma; //prior standard deviation
 }
@@ -13,8 +13,7 @@ transformed data{
 
 generated quantities {
 	vector[N] prob_ppc;
-	{
 	real beta[M] = normal_rng(0, ones_M*sigma); //prior model
 	real alpha = normal_rng(0, sigma); //prior model
-	prob_ppc = inv_logit(X*to_vector(beta) + ones_N*alpha);}
+	prob_ppc = inv_logit(X*to_vector(beta) + ones_N*alpha);
 }

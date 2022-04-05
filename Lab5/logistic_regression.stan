@@ -1,6 +1,6 @@
 data {
 	int<lower=1> N; //number of observations
-	int<lower=1 M; // numer of covariates
+	int<lower=1> M; // numer of covariates
 	matrix[N, M] X; // covariate design matrix
 	int<lower=0, upper =1> y[N]; //binary variates
 }
