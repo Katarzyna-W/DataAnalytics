@@ -16,7 +16,7 @@ transformed data {
 }
 
 parameters {
-	vecotr[N_predict] f_tilde;
+	vector[N_predict] f_tilde;
 }
 
 transformed parameters {

@@ -1,7 +1,7 @@
 data {
 	int<lower = 1> N_obs;
 	real x_obs[N_obs];
-	vecotr[N_obs] y_obs;
+	vector[N_obs] y_obs;
 }
 
 parameters {
