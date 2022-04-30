@@ -2,7 +2,7 @@ data {
 	int<lower=1> N; //number of samples
 }
 
-generated quantites {
+generated quantities {
 	matrix[N,3] X;
 	
 	vector [N] zeros = rep_vector(0,N);

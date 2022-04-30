@@ -10,6 +10,11 @@ parameters {
 	vector[K] beta;
 }
 
+transformed parameters{
+    vector[N] mu;
+    mu = X*beta;
+}
+
 model {
 	y~normal(mu, sigma);
 }
