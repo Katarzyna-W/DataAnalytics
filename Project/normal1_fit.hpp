@@ -10,20 +10,20 @@ using namespace stan::math;
 stan::math::profile_map profiles__;
 static constexpr std::array<const char*, 15> locations_array__ = 
 {" (found before start of program)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1_fit.stan', line 7, column 2 to column 10)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1_fit.stan', line 8, column 2 to column 22)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1_fit.stan', line 18, column 2 to column 20)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1_fit.stan', line 20, column 4 to column 58)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1_fit.stan', line 19, column 17 to line 21, column 3)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1_fit.stan', line 19, column 2 to line 21, column 3)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1_fit.stan', line 22, column 2 to column 49)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1_fit.stan', line 12, column 2 to column 25)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1_fit.stan', line 13, column 2 to column 27)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1_fit.stan', line 14, column 2 to column 35)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1_fit.stan', line 2, column 2 to column 8)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1_fit.stan', line 3, column 20 to column 21)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1_fit.stan', line 3, column 2 to column 23)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1_fit.stan', line 18, column 9 to column 10)"};
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1_fit.stan', line 7, column 2 to column 10)",
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1_fit.stan', line 8, column 2 to column 22)",
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1_fit.stan', line 18, column 2 to column 20)",
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1_fit.stan', line 20, column 4 to column 58)",
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1_fit.stan', line 19, column 17 to line 21, column 3)",
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1_fit.stan', line 19, column 2 to line 21, column 3)",
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1_fit.stan', line 22, column 2 to column 49)",
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1_fit.stan', line 12, column 2 to column 25)",
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1_fit.stan', line 13, column 2 to column 27)",
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1_fit.stan', line 14, column 2 to column 35)",
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1_fit.stan', line 2, column 2 to column 8)",
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1_fit.stan', line 3, column 20 to column 21)",
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1_fit.stan', line 3, column 2 to column 23)",
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1_fit.stan', line 18, column 9 to column 10)"};
 
 
 

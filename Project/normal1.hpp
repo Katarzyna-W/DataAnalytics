@@ -10,11 +10,11 @@ using namespace stan::math;
 stan::math::profile_map profiles__;
 static constexpr std::array<const char*, 6> locations_array__ = 
 {" (found before start of program)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1.stan', line 7, column 2 to column 44)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1.stan', line 8, column 2 to column 43)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1.stan', line 9, column 2 to column 37)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1.stan', line 2, column 4 to column 16)",
- " (in '/home/kasia/Documents/DataAnalytics/Project/normal1.stan', line 3, column 4 to column 19)"};
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1.stan', line 7, column 2 to column 45)",
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1.stan', line 8, column 2 to column 54)",
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1.stan', line 9, column 2 to column 37)",
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1.stan', line 2, column 4 to column 16)",
+ " (in 'C:/Users/Agnieszka/Desktop/drive/normal1.stan', line 3, column 4 to column 19)"};
 
 
 
@@ -135,13 +135,14 @@ class normal1_model final : public model_base_crtp<normal1_model> {
       } 
       double mu = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 1;
-      mu = stan::math::normal_rng(data_mu, data_sigma, base_rng__);
+      mu = stan::math::normal_rng(data_mu, (0.3 * data_mu), base_rng__);
       double sigma = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 2;
-      sigma = stan::math::exponential_rng(data_sigma, base_rng__);
+      sigma = stan::math::normal_rng(data_sigma, (0.3 * data_sigma),
+                base_rng__);
       double prior = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 3;
-      prior = stan::math::normal_rng(mu, sigma, base_rng__);
+      prior = stan::math::normal_rng(2500, 500, base_rng__);
       out__.write(mu);
       out__.write(sigma);
       out__.write(prior);
