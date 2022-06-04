@@ -10,19 +10,19 @@ using namespace stan::math;
 stan::math::profile_map profiles__;
 static constexpr std::array<const char*, 14> locations_array__ = 
 {" (found before start of program)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/prior_test.stan', line 9, column 3 to column 38)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/prior_test.stan', line 10, column 3 to column 32)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/prior_test.stan', line 11, column 3 to column 39)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/prior_test.stan', line 12, column 3 to column 17)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/prior_test.stan', line 14, column 7 to column 56)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/prior_test.stan', line 13, column 18 to line 15, column 4)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/prior_test.stan', line 13, column 3 to line 15, column 4)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/prior_test.stan', line 2, column 3 to column 9)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/prior_test.stan', line 3, column 13 to column 14)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/prior_test.stan', line 3, column 3 to column 16)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/prior_test.stan', line 4, column 3 to column 11)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/prior_test.stan', line 5, column 3 to column 12)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/prior_test.stan', line 12, column 14 to column 15)"};
+ " (in '/home/kasia/Documents/DataAnalytics/Project/prior_test.stan', line 9, column 3 to column 38)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/prior_test.stan', line 10, column 3 to column 33)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/prior_test.stan', line 11, column 3 to column 39)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/prior_test.stan', line 14, column 3 to column 17)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/prior_test.stan', line 16, column 7 to column 56)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/prior_test.stan', line 15, column 18 to line 17, column 4)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/prior_test.stan', line 15, column 3 to line 17, column 4)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/prior_test.stan', line 2, column 3 to column 9)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/prior_test.stan', line 3, column 13 to column 14)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/prior_test.stan', line 3, column 3 to column 16)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/prior_test.stan', line 4, column 3 to column 12)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/prior_test.stan', line 5, column 3 to column 13)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/prior_test.stan', line 14, column 14 to column 15)"};
 
 
 
@@ -32,8 +32,8 @@ class prior_test_model final : public model_base_crtp<prior_test_model> {
  private:
   int N;
   std::vector<double> dane;
-  int std;
-  int mean; 
+  double std;
+  double mean; 
   
  
  public:
@@ -81,21 +81,21 @@ class prior_test_model final : public model_base_crtp<prior_test_model> {
       current_statement__ = 10;
       dane = context__.vals_r("dane");
       current_statement__ = 11;
-      context__.validate_dims("data initialization","std","int",
+      context__.validate_dims("data initialization","std","double",
            std::vector<size_t>{});
-      std = std::numeric_limits<int>::min();
+      std = std::numeric_limits<double>::quiet_NaN();
       
       
       current_statement__ = 11;
-      std = context__.vals_i("std")[(1 - 1)];
+      std = context__.vals_r("std")[(1 - 1)];
       current_statement__ = 12;
-      context__.validate_dims("data initialization","mean","int",
+      context__.validate_dims("data initialization","mean","double",
            std::vector<size_t>{});
-      mean = std::numeric_limits<int>::min();
+      mean = std::numeric_limits<double>::quiet_NaN();
       
       
       current_statement__ = 12;
-      mean = context__.vals_i("mean")[(1 - 1)];
+      mean = context__.vals_r("mean")[(1 - 1)];
       current_statement__ = 13;
       stan::math::validate_non_negative_index("prior", "N", N);
     } catch (const std::exception& e) {
@@ -169,7 +169,7 @@ class prior_test_model final : public model_base_crtp<prior_test_model> {
       alpha = stan::math::normal_rng(mean, std, base_rng__);
       double beta = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 2;
-      beta = stan::math::normal_rng(0, 10, base_rng__);
+      beta = stan::math::normal_rng(0, 0.3, base_rng__);
       double sigma = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 3;
       sigma = stan::math::exponential_rng(0.067, base_rng__);

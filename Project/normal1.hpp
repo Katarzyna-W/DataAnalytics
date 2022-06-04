@@ -10,11 +10,11 @@ using namespace stan::math;
 stan::math::profile_map profiles__;
 static constexpr std::array<const char*, 6> locations_array__ = 
 {" (found before start of program)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal1.stan', line 7, column 2 to column 45)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal1.stan', line 8, column 2 to column 54)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal1.stan', line 9, column 2 to column 37)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal1.stan', line 2, column 4 to column 16)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal1.stan', line 3, column 4 to column 19)"};
+ " (in '/home/kasia/Documents/DataAnalytics/Project/normal1.stan', line 7, column 2 to column 45)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/normal1.stan', line 8, column 2 to column 54)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/normal1.stan', line 9, column 2 to column 37)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/normal1.stan', line 2, column 4 to column 17)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/normal1.stan', line 3, column 4 to column 20)"};
 
 
 
@@ -22,8 +22,8 @@ static constexpr std::array<const char*, 6> locations_array__ =
 class normal1_model final : public model_base_crtp<normal1_model> {
 
  private:
-  int data_mu;
-  int data_sigma; 
+  double data_mu;
+  double data_sigma; 
   
  
  public:
@@ -52,21 +52,21 @@ class normal1_model final : public model_base_crtp<normal1_model> {
       int pos__ = std::numeric_limits<int>::min();
       pos__ = 1;
       current_statement__ = 4;
-      context__.validate_dims("data initialization","data_mu","int",
+      context__.validate_dims("data initialization","data_mu","double",
            std::vector<size_t>{});
-      data_mu = std::numeric_limits<int>::min();
+      data_mu = std::numeric_limits<double>::quiet_NaN();
       
       
       current_statement__ = 4;
-      data_mu = context__.vals_i("data_mu")[(1 - 1)];
+      data_mu = context__.vals_r("data_mu")[(1 - 1)];
       current_statement__ = 5;
-      context__.validate_dims("data initialization","data_sigma","int",
+      context__.validate_dims("data initialization","data_sigma","double",
            std::vector<size_t>{});
-      data_sigma = std::numeric_limits<int>::min();
+      data_sigma = std::numeric_limits<double>::quiet_NaN();
       
       
       current_statement__ = 5;
-      data_sigma = context__.vals_i("data_sigma")[(1 - 1)];
+      data_sigma = context__.vals_r("data_sigma")[(1 - 1)];
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
     }
@@ -142,7 +142,7 @@ class normal1_model final : public model_base_crtp<normal1_model> {
                 base_rng__);
       double prior = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 3;
-      prior = stan::math::normal_rng(2500, 500, base_rng__);
+      prior = stan::math::normal_rng(mu, sigma, base_rng__);
       out__.write(mu);
       out__.write(sigma);
       out__.write(prior);
