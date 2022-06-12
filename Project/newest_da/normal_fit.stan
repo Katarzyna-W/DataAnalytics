@@ -12,6 +12,7 @@ model {
     mu ~ normal(1300, 600);
     sigma ~ exponential(0.005);
     burglaries ~ normal(mu, sigma);
+    for(j in 1:N)
 	target += normal_lpdf(burglaries[j] | mu, sigma);
 }
 
