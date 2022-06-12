@@ -16,7 +16,7 @@ transformed parameters {
 
 model {
    alpha ~ normal(1275, 600);
-   beta ~ normal(0.1, 0.075);
+   beta ~ lognormal(0, 1);
    sigma ~ exponential(0.005);
    burglaries ~ normal(mu, sigma);
 }
