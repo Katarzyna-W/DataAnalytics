@@ -10,22 +10,22 @@ using namespace stan::math;
 stan::math::profile_map profiles__;
 static constexpr std::array<const char*, 17> locations_array__ = 
 {" (found before start of program)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 7, column 3 to column 11)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 8, column 3 to column 26)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 20, column 4 to column 22)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 21, column 4 to column 28)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 25, column 8 to column 44)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 26, column 8 to column 60)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 24, column 4 to line 27, column 5)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 23, column 4 to line 27, column 5)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 14, column 4 to column 27)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 15, column 4 to column 31)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 16, column 4 to column 35)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 2, column 4 to column 10)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 3, column 21 to column 22)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 3, column 4 to column 24)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 20, column 11 to column 12)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 21, column 11 to column 12)"};
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_fit.stan', line 7, column 3 to column 11)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_fit.stan', line 8, column 3 to column 26)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_fit.stan', line 20, column 4 to column 22)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_fit.stan', line 21, column 4 to column 28)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_fit.stan', line 25, column 8 to column 44)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_fit.stan', line 26, column 8 to column 60)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_fit.stan', line 24, column 4 to line 27, column 5)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_fit.stan', line 23, column 4 to line 27, column 5)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_fit.stan', line 14, column 4 to column 26)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_fit.stan', line 15, column 4 to column 29)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_fit.stan', line 16, column 4 to column 35)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_fit.stan', line 2, column 4 to column 10)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_fit.stan', line 3, column 21 to column 22)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_fit.stan', line 3, column 4 to column 24)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_fit.stan', line 20, column 11 to column 12)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_fit.stan', line 21, column 11 to column 12)"};
 
 
 
@@ -119,9 +119,9 @@ class normal_fit_model final : public model_base_crtp<normal_fit_model> {
                 0, lp__);
       {
         current_statement__ = 9;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(mu, 1300, 600));
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(mu, 0.8, 0.3));
         current_statement__ = 10;
-        lp_accum__.add(stan::math::exponential_lpdf<propto__>(sigma, 0.005));
+        lp_accum__.add(stan::math::exponential_lpdf<propto__>(sigma, 0.5));
         current_statement__ = 11;
         lp_accum__.add(
           stan::math::normal_lpdf<propto__>(burglaries, mu, sigma));

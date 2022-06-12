@@ -8,24 +8,22 @@ using namespace stan::math;
 
 
 stan::math::profile_map profiles__;
-static constexpr std::array<const char*, 17> locations_array__ = 
+static constexpr std::array<const char*, 15> locations_array__ = 
 {" (found before start of program)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 7, column 3 to column 11)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 8, column 3 to column 26)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 18, column 4 to column 22)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 19, column 4 to column 28)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 22, column 8 to column 44)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 23, column 8 to column 60)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 21, column 4 to line 24, column 5)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 20, column 4 to line 24, column 5)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 12, column 4 to column 27)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 13, column 4 to column 31)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 14, column 4 to column 35)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 2, column 4 to column 10)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 3, column 21 to column 22)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 3, column 4 to column 24)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 18, column 11 to column 12)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_fit.stan', line 19, column 11 to column 12)"};
+ " (in '/home/kasia/Documents/DataAnalytics/Project/newest_da/normal_fit.stan', line 7, column 3 to column 11)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/newest_da/normal_fit.stan', line 8, column 3 to column 26)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/newest_da/normal_fit.stan', line 18, column 4 to column 22)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/newest_da/normal_fit.stan', line 21, column 8 to column 60)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/newest_da/normal_fit.stan', line 20, column 4 to line 22, column 5)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/newest_da/normal_fit.stan', line 19, column 4 to line 22, column 5)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/newest_da/normal_fit.stan', line 23, column 4 to column 42)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/newest_da/normal_fit.stan', line 12, column 4 to column 27)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/newest_da/normal_fit.stan', line 13, column 4 to column 31)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/newest_da/normal_fit.stan', line 14, column 4 to column 35)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/newest_da/normal_fit.stan', line 2, column 4 to column 10)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/newest_da/normal_fit.stan', line 3, column 20 to column 21)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/newest_da/normal_fit.stan', line 3, column 4 to column 23)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/newest_da/normal_fit.stan', line 18, column 11 to column 12)"};
 
 
 
@@ -62,29 +60,27 @@ class normal_fit_model final : public model_base_crtp<normal_fit_model> {
     try {
       int pos__ = std::numeric_limits<int>::min();
       pos__ = 1;
-      current_statement__ = 12;
+      current_statement__ = 11;
       context__.validate_dims("data initialization","N","int",
            std::vector<size_t>{});
       N = std::numeric_limits<int>::min();
       
       
-      current_statement__ = 12;
+      current_statement__ = 11;
       N = context__.vals_i("N")[(1 - 1)];
-      current_statement__ = 13;
+      current_statement__ = 12;
       stan::math::validate_non_negative_index("burglaries", "N", N);
-      current_statement__ = 14;
+      current_statement__ = 13;
       context__.validate_dims("data initialization","burglaries","double",
            std::vector<size_t>{static_cast<size_t>(N)});
       burglaries = 
         std::vector<double>(N, std::numeric_limits<double>::quiet_NaN());
       
       
-      current_statement__ = 14;
+      current_statement__ = 13;
       burglaries = context__.vals_r("burglaries");
-      current_statement__ = 15;
+      current_statement__ = 14;
       stan::math::validate_non_negative_index("log_lik", "N", N);
-      current_statement__ = 16;
-      stan::math::validate_non_negative_index("burglary", "N", N);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
     }
@@ -118,11 +114,11 @@ class normal_fit_model final : public model_base_crtp<normal_fit_model> {
       sigma = in__.template read_constrain_lb<local_scalar_t__, jacobian__>(
                 0, lp__);
       {
-        current_statement__ = 9;
+        current_statement__ = 8;
         lp_accum__.add(stan::math::normal_lpdf<propto__>(mu, 1300, 600));
-        current_statement__ = 10;
+        current_statement__ = 9;
         lp_accum__.add(stan::math::exponential_lpdf<propto__>(sigma, 0.005));
-        current_statement__ = 11;
+        current_statement__ = 10;
         lp_accum__.add(
           stan::math::normal_lpdf<propto__>(burglaries, mu, sigma));
       }
@@ -178,21 +174,18 @@ class normal_fit_model final : public model_base_crtp<normal_fit_model> {
       Eigen::Matrix<double, -1, 1> log_lik =
          Eigen::Matrix<double, -1, 1>::Constant(N,
            std::numeric_limits<double>::quiet_NaN());
-      std::vector<double> burglary =
-         std::vector<double>(N, std::numeric_limits<double>::quiet_NaN());
-      current_statement__ = 8;
+      current_statement__ = 6;
       for (int j = 1; j <= N; ++j) {
-        current_statement__ = 5;
-        stan::model::assign(burglary,
-          stan::math::normal_rng(mu, sigma, base_rng__),
-          "assigning variable burglary", stan::model::index_uni(j));
-        current_statement__ = 6;
+        current_statement__ = 4;
         stan::model::assign(log_lik,
           stan::math::normal_lpdf<false>(
             stan::model::rvalue(burglaries, "burglaries",
               stan::model::index_uni(j)), mu, sigma),
           "assigning variable log_lik", stan::model::index_uni(j));
       }
+      double burglary = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 7;
+      burglary = stan::math::normal_rng(mu, sigma, base_rng__);
       out__.write(log_lik);
       out__.write(burglary);
     } catch (const std::exception& e) {
@@ -236,7 +229,7 @@ class normal_fit_model final : public model_base_crtp<normal_fit_model> {
     
     dimss__ = std::vector<std::vector<size_t>>{std::vector<size_t>{},
       std::vector<size_t>{}, std::vector<size_t>{static_cast<size_t>(N)},
-      std::vector<size_t>{static_cast<size_t>(N)}};
+      std::vector<size_t>{}};
     
     } // get_dims() 
     
@@ -258,11 +251,7 @@ class normal_fit_model final : public model_base_crtp<normal_fit_model> {
           param_names__.emplace_back(std::string() + "log_lik" + '.' + std::to_string(sym1__));
         } 
       }
-      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        {
-          param_names__.emplace_back(std::string() + "burglary" + '.' + std::to_string(sym1__));
-        } 
-      }
+      param_names__.emplace_back(std::string() + "burglary");
     }
     
     } // constrained_param_names() 
@@ -285,24 +274,20 @@ class normal_fit_model final : public model_base_crtp<normal_fit_model> {
           param_names__.emplace_back(std::string() + "log_lik" + '.' + std::to_string(sym1__));
         } 
       }
-      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        {
-          param_names__.emplace_back(std::string() + "burglary" + '.' + std::to_string(sym1__));
-        } 
-      }
+      param_names__.emplace_back(std::string() + "burglary");
     }
     
     } // unconstrained_param_names() 
     
   inline std::string get_constrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"mu\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"sigma\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"},{\"name\":\"burglary\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"mu\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"sigma\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"},{\"name\":\"burglary\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"}]");
     
     } // get_constrained_sizedtypes() 
     
   inline std::string get_unconstrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"mu\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"sigma\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"},{\"name\":\"burglary\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(N) + ",\"element_type\":{\"name\":\"real\"}},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"mu\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"sigma\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"generated_quantities\"},{\"name\":\"burglary\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"}]");
     
     } // get_unconstrained_sizedtypes() 
     
@@ -319,7 +304,7 @@ class normal_fit_model final : public model_base_crtp<normal_fit_model> {
   (1 + 1);
       const size_t num_transformed = 0;
       const size_t num_gen_quantities = 
-  (N + N);
+  (N + 1);
       std::vector<double> vars_vec(num_params__
        + (emit_transformed_parameters * num_transformed)
        + (emit_generated_quantities * num_gen_quantities));
@@ -341,7 +326,7 @@ class normal_fit_model final : public model_base_crtp<normal_fit_model> {
   (1 + 1);
       const size_t num_transformed = 0;
       const size_t num_gen_quantities = 
-  (N + N);
+  (N + 1);
       vars.resize(num_params__
         + (emit_transformed_parameters * num_transformed)
         + (emit_generated_quantities * num_gen_quantities));

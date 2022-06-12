@@ -1,6 +1,6 @@
 data {
     int N;
-    real burglaries [N];
+    real burglaries[N];
 }
 
 parameters {
@@ -16,10 +16,9 @@ model {
 
 generated quantities {
     vector[N] log_lik;
-    array [N] real burglary;
     for (j in 1:N)
     {
-        burglary[j] = normal_rng(mu, sigma);
         log_lik[j] = normal_lpdf(burglaries[j] | mu, sigma);
     }
+    real burglary = normal_rng(mu, sigma);
 }

@@ -10,9 +10,9 @@ using namespace stan::math;
 stan::math::profile_map profiles__;
 static constexpr std::array<const char*, 4> locations_array__ = 
 {" (found before start of program)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_ppc.stan', line 3, column 2 to column 34)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_ppc.stan', line 4, column 2 to column 50)",
- " (in 'C:/Users/Agnieszka/Desktop/drive/normal_ppc.stan', line 5, column 2 to column 40)"};
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_ppc.stan', line 3, column 2 to column 31)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_ppc.stan', line 4, column 2 to column 37)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/drive/normal_ppc.stan', line 5, column 2 to column 40)"};
 
 
 
@@ -116,15 +116,13 @@ class normal_ppc_model final : public model_base_crtp<normal_ppc_model> {
       } 
       double mu = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 1;
-      mu = stan::math::normal_rng(1300, 600, base_rng__);
+      mu = stan::math::normal_rng(1, 0.5, base_rng__);
       double sigma = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 2;
-      sigma = stan::math::exponential_rng(0.005, base_rng__);
+      sigma = stan::math::exponential_rng(0.8, base_rng__);
       double burglary = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 3;
       burglary = stan::math::normal_rng(mu, sigma, base_rng__);
-      current_statement__ = 2;
-      stan::math::check_greater_or_equal(function__, "sigma", sigma, 0);
       out__.write(mu);
       out__.write(sigma);
       out__.write(burglary);
