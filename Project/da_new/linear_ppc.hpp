@@ -10,17 +10,17 @@ using namespace stan::math;
 stan::math::profile_map profiles__;
 static constexpr std::array<const char*, 12> locations_array__ = 
 {" (found before start of program)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/linear_ppc.stan', line 7, column 3 to column 38)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/linear_ppc.stan', line 8, column 3 to column 34)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/linear_ppc.stan', line 9, column 3 to column 53)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/linear_ppc.stan', line 10, column 3 to column 32)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/linear_ppc.stan', line 12, column 6 to column 63)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/linear_ppc.stan', line 11, column 18 to line 13, column 4)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/linear_ppc.stan', line 11, column 3 to line 13, column 4)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/linear_ppc.stan', line 2, column 3 to column 9)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/linear_ppc.stan', line 3, column 16 to column 17)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/linear_ppc.stan', line 3, column 3 to column 19)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/linear_ppc.stan', line 10, column 29 to column 30)"};
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/linear_ppc.stan', line 7, column 3 to column 38)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/linear_ppc.stan', line 8, column 3 to column 34)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/linear_ppc.stan', line 9, column 3 to column 53)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/linear_ppc.stan', line 10, column 3 to column 32)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/linear_ppc.stan', line 12, column 6 to column 63)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/linear_ppc.stan', line 11, column 18 to line 13, column 4)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/linear_ppc.stan', line 11, column 3 to line 13, column 4)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/linear_ppc.stan', line 2, column 3 to column 9)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/linear_ppc.stan', line 3, column 16 to column 17)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/linear_ppc.stan', line 3, column 3 to column 19)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/linear_ppc.stan', line 10, column 29 to column 30)"};
 
 
 

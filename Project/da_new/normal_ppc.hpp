@@ -10,9 +10,9 @@ using namespace stan::math;
 stan::math::profile_map profiles__;
 static constexpr std::array<const char*, 4> locations_array__ = 
 {" (found before start of program)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/normal_ppc.stan', line 2, column 2 to column 34)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/normal_ppc.stan', line 3, column 2 to column 52)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/normal_ppc.stan', line 4, column 2 to column 40)"};
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/normal_ppc.stan', line 2, column 2 to column 34)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/normal_ppc.stan', line 3, column 2 to column 52)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/normal_ppc.stan', line 4, column 2 to column 40)"};
 
 
 

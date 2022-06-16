@@ -10,21 +10,21 @@ using namespace stan::math;
 stan::math::profile_map profiles__;
 static constexpr std::array<const char*, 16> locations_array__ = 
 {" (found before start of program)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/normal_fit.stan', line 7, column 3 to column 11)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/normal_fit.stan', line 8, column 3 to column 26)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/normal_fit.stan', line 18, column 4 to column 22)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/normal_fit.stan', line 19, column 4 to column 18)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/normal_fit.stan', line 22, column 8 to column 60)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/normal_fit.stan', line 21, column 4 to line 23, column 5)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/normal_fit.stan', line 20, column 4 to line 23, column 5)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/normal_fit.stan', line 24, column 4 to column 37)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/normal_fit.stan', line 12, column 4 to column 27)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/normal_fit.stan', line 13, column 4 to column 33)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/normal_fit.stan', line 14, column 4 to column 35)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/normal_fit.stan', line 2, column 4 to column 10)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/normal_fit.stan', line 3, column 20 to column 21)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/normal_fit.stan', line 3, column 4 to column 23)",
- " (in 'C:/Users/Agnieszka/Desktop/newest_da/newest_da/normal_fit.stan', line 18, column 11 to column 12)"};
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/normal_fit.stan', line 7, column 3 to column 11)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/normal_fit.stan', line 8, column 3 to column 26)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/normal_fit.stan', line 18, column 4 to column 22)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/normal_fit.stan', line 19, column 4 to column 18)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/normal_fit.stan', line 22, column 8 to column 60)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/normal_fit.stan', line 21, column 4 to line 23, column 5)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/normal_fit.stan', line 20, column 4 to line 23, column 5)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/normal_fit.stan', line 24, column 4 to column 37)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/normal_fit.stan', line 12, column 4 to column 27)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/normal_fit.stan', line 13, column 4 to column 33)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/normal_fit.stan', line 14, column 4 to column 35)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/normal_fit.stan', line 2, column 4 to column 10)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/normal_fit.stan', line 3, column 20 to column 21)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/normal_fit.stan', line 3, column 4 to column 23)",
+ " (in '/home/kasia/Documents/DataAnalytics/Project/da_new/normal_fit.stan', line 18, column 11 to column 12)"};
 
 
 
