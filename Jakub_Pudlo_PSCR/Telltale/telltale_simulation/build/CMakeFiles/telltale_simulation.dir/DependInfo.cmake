@@ -1,0 +1,27 @@
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  "C"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_C
+  "/home/student/Desktop/telltale/telltale_simulation/keyboard.c" "/home/student/Desktop/telltale/telltale_simulation/build/CMakeFiles/telltale_simulation.dir/keyboard.c.o"
+  "/home/student/Desktop/telltale/telltale_simulation/logger.c" "/home/student/Desktop/telltale/telltale_simulation/build/CMakeFiles/telltale_simulation.dir/logger.c.o"
+  "/home/student/Desktop/telltale/telltale_simulation/node1.c" "/home/student/Desktop/telltale/telltale_simulation/build/CMakeFiles/telltale_simulation.dir/node1.c.o"
+  "/home/student/Desktop/telltale/telltale_simulation/node2.c" "/home/student/Desktop/telltale/telltale_simulation/build/CMakeFiles/telltale_simulation.dir/node2.c.o"
+  "/home/student/Desktop/telltale/telltale_simulation/periodic.c" "/home/student/Desktop/telltale/telltale_simulation/build/CMakeFiles/telltale_simulation.dir/periodic.c.o"
+  "/home/student/Desktop/telltale/telltale_simulation/screen.c" "/home/student/Desktop/telltale/telltale_simulation/build/CMakeFiles/telltale_simulation.dir/screen.c.o"
+  "/home/student/Desktop/telltale/telltale_simulation/simulation.c" "/home/student/Desktop/telltale/telltale_simulation/build/CMakeFiles/telltale_simulation.dir/simulation.c.o"
+  "/home/student/Desktop/telltale/telltale_simulation/telltale_simulation.c" "/home/student/Desktop/telltale/telltale_simulation/build/CMakeFiles/telltale_simulation.dir/telltale_simulation.c.o"
+  )
+set(CMAKE_C_COMPILER_ID "GNU")
+
+# The include file search paths:
+set(CMAKE_C_TARGET_INCLUDE_PATH
+  )
+
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

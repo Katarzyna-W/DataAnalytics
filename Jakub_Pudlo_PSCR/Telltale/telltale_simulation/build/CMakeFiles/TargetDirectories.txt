@@ -1,0 +1,3 @@
+/home/student/Desktop/telltale/telltale_simulation/build/CMakeFiles/rebuild_cache.dir
+/home/student/Desktop/telltale/telltale_simulation/build/CMakeFiles/edit_cache.dir
+/home/student/Desktop/telltale/telltale_simulation/build/CMakeFiles/telltale_simulation.dir
